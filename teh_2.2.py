@@ -1,6 +1,6 @@
-#Kysy ympärän sade
-sade = float(input("Anna ympärän sateen: "))
+#Kysy ympyrän säde
+sade = float(input("Anna ympyrän säteen: "))
 pi = 3.14
-#ympärään pinta-ala on pi*r^2
+#ympyrän pinta-ala on pi*r^2
 ala = pi * (sade ** 2)
-print(f"Ympärän sateen ala on {ala}")
+print(f"Ympyrän säteen ala on {ala}")
