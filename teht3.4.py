@@ -1,3 +1,4 @@
+
 #Kysy käytäjältä vuosiluku
 vuosi = int(input("Anna vuosiluku: "))
 
