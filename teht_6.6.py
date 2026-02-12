@@ -2,7 +2,7 @@ import math
 
 def pizza_hinnan(halkaisija_cm, hinta_eur):
     pinta_ala = math.pi * (halkaisija_cm / 2) ** 2
-    pinta_m2 = pinta_ala / 1000 # cm^2 to m^2
+    pinta_m2 = pinta_ala / 100 # cm^2 to m^2
     hinta = hinta_eur / pinta_m2
     return hinta
 

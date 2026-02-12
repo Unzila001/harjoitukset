@@ -1,7 +1,7 @@
 import random
 pisteet = int(input("Anna satunnaisten pisteiden määrä: "))
 ympyra_sisalla = 0
-for _ in range(pisteet):
+for i in range(pisteet):
     x = random.uniform(-1, 1)
     y = random.uniform(-1, 1)
 
@@ -9,4 +9,4 @@ for _ in range(pisteet):
         ympyra_sisalla += 1
 pi_laskettu = 4 * ympyra_sisalla / pisteet
 
-print(f"Piin likiarvo: {pi_laskettu}")
+print(f"Piin likiarvo: {pi_laskettu:.6f}")
