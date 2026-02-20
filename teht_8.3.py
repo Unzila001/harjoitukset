@@ -11,7 +11,7 @@ yhteys = mysql.connector.connect(
 )
 
 def GetCoordinate(icao):
-    sql = f"SELECT latitude_deg, longitude_deg, name FROM airports WHERE name = '{icao}'"
+    sql = f"SELECT latitude_deg, longitude_deg, name FROM airport WHERE name = '{icao}'"
     kursori = yhteys.cursor()
     kursori.execute(sql)
     val = kursori.fetchall()
@@ -29,4 +29,5 @@ def main():
     airports = []
     while len(airports) < 2:
         airports.append(GetCoordinate(input("Syötä ICAO-koodi: ")))
-    print(f"Lentokenttien välinen matka on {}")
+    print(f"Lentokenttien välinen matka on {GetDistance(airports[0], airports[1])}")
+main()
