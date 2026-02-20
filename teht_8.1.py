@@ -8,16 +8,23 @@ yhteys = mysql.connector.connect(
     autocommit=True
 )
 
-def get_airport_data(icao):
-    sql = f"SELECT name, iso:region FROM airport WHERE ident ='{icao}'"
-    kursori = yhteys.cursor()
-    kursori.execute(sql)
-    val = kursori.fetchall()
-    if kursori.rowcount > 0:
-        for n in val:
-            print(f"{icao} lentokentän nimi on {n[0]} ja se sijaistee n[1]" )
-    return val
+kursori = yhteys.cursor()
+kursori.execute("SELECT DATABASE()")
+print("DATABASE yhteys:", kursori.fetchone()[0])
 
+icao = input("Anna airport ICAO-koodi: ").upper()
+sql = "SELECT name, municipality FROM airport WHERE ident =%s"
+kursori.execute(sql, (icao,))
+result = kursori.fetchone()
+
+if result:
+    print(f"Lentokenettän nimi on {result[0]}")
+    print(f"Municipality on {result[1]}" )
+else:
+    print("Lentokenttää ei löydy")
+
+kursori.close()
+yhteys.close()
 
 
 
