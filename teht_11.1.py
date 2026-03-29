@@ -28,6 +28,8 @@ class Lehti(Julkaisu):
         super().tulosta_tiedot()
         print(f"Lehden päätoimittaja {self.päätoimittaja}")
 
+#pääohjelma
+
 aku = Lehti("Aku Ankka", "Aki Hyyppä")
 hytti6 = Kirja("Hytti n:o 6", "Rosa Liksom", 200)
 
