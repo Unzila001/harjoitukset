@@ -1,5 +1,5 @@
 'use strict'
-//Syötteiden luku
+//Syötteiden lukumäärä
 let luku1 = +prompt("Anna eka luku");
 let luku2 = +prompt("Anna toka luku");
 let luku3 = +prompt("Anna kolmas luku");
