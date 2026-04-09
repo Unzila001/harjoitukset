@@ -1,4 +1,5 @@
 let dogs = []
+
 for (let i = 0; i < 6; i++) {
   dogs.push(prompt("Dog name: "));
 }
